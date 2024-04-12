@@ -81,8 +81,8 @@ class Animais extends Component<{}, State> {
                 </label>
                 <button type="submit" className="border w-20">Enviar</button>
             </form>
-            <main className="flex flex-col gap-2 justify-center items-center mt-8">
-                <span>Informações dos animais:</span>
+
+            <main className="flex gap-2 justify-center items-center mt-8">
                 {this.state.animais.map((animal, index) => (
                     <Animal key={index} {...animal} />
                 ))}
