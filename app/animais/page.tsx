@@ -15,11 +15,11 @@ class Animal extends Component<AnimalProps> {
         const { nome, especie, cor, som } = this.props;
 
         return (
-            <div className="pb-3">
-                <p>Nome: {nome}</p>
-                <p>Espécie: {especie}</p>
-                <p>Cor: {cor}</p>
-                <p>Som: {som}</p>
+            <div className="flex flex-col justify-center items-center border w-52 p-3">
+                <p><b>Nome:</b> {nome}</p>
+                <p><b>Espécie:</b> {especie}</p>
+                <p><b>Cor:</b> {cor}</p>
+                <p><b>Som:</b> {som}</p>
             </div>
         );
     }
@@ -81,7 +81,7 @@ class Animais extends Component<{}, State> {
                 </label>
                 <button type="submit" className="border w-20">Enviar</button>
             </form>
-            <main className="flex min-h-screen flex-col items-center p-10">
+            <main className="flex flex-col gap-2 justify-center items-center mt-8">
                 <span>Informações dos animais:</span>
                 {this.state.animais.map((animal, index) => (
                     <Animal key={index} {...animal} />
